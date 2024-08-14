@@ -60,7 +60,7 @@ section {
 footer {
     background-color: #1C0A8A;
     color: #1C0A8A;
-    padding: 0px;
+    padding: 15px;
     text-align: center;
     position: relative; /* o usar fixed */
     top: 50px; /* Ajusta la distancia desde su posición normal */
