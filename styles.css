@@ -30,7 +30,7 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #fff;
+    color: #0E074A;
     text-decoration: none;
 }
 
@@ -45,7 +45,7 @@ section {
 }
 
 .gallery-item {
-    background-color: #fff;
+    background-color: #0E074A;
     border: 1px solid #ddd;
     padding: 15px;
     text-align: center;
@@ -58,7 +58,7 @@ section {
 }
 
 footer {
-    background-color: #333;
+    background-color: #0E074A;
     color: #fff;
     padding: 15px;
     text-align: center;
