@@ -1,16 +1,16 @@
 /* Archivo: styles.css */
 
 body {
-    font-family: Comfortaa, sans-serif;
+    font-family: Courier, monospace;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
+    background-color: #0E074A;
+    color: #E145FC;
 }
 
 header {
-    background-color: #333;
-    color: #fff;
+    background-color: #0E074A;
+    color: #E145FC;
     padding: 20px;
     text-align: center;
 }
