@@ -8,6 +8,12 @@ body {
     color: #E145FC;
 }
 
+img {
+    width: 300px; /* Ajusta según tus necesidades */
+    height: 200px; /* Ajusta según tus necesidades */
+    object-fit: cover; /* Recorta la imagen para que se ajuste si es necesario */
+}
+
 header {
     background-color: #0E074A;
     color: #E145FC;
