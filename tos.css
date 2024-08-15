@@ -16,15 +16,25 @@ img {
 
 header {
     background-color: #0E074A;
-    color: #FFFFFF;
+    color: #E145FC;
     padding: 20px;
     text-align: center;
 }
 
 header h1 {
+    color: #FFFFFF;
     margin: 0;
 }
 
+header h2 {
+    color: #FFFFFF;
+    margin: 0;
+}
+
+header h3 {
+    color: #FFFFFF;
+    margin: 0;
+}
 nav ul {
     list-style: none;
     padding: 0;
