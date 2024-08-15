@@ -9,7 +9,7 @@ body {
 }
 
 header {
-    background-color: #1C0A8A;
+    background-color: #0E074A;
     color: #E145FC;
     padding: 20px;
     text-align: center;
@@ -45,7 +45,7 @@ section {
 }
 
 .gallery-item {
-    background-color: #0E074A;
+    background-color: #E145FC;
     border: 1px solid #ddd;
     padding: 15px;
     text-align: center;
