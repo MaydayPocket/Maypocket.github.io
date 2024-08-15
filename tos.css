@@ -18,16 +18,19 @@ header {
 header h1 {
     color: #E145FC;
     margin: 0;
+    text-align: center;
 }
 
 header h2 {
     color: #FFFFFF;
     margin: 0;
+    text-align: center;
 }
 
 header h3 {
     color: #FFFFFF;
     margin: 0;
+    text-align: center;
 }
 nav ul {
     list-style: none;
