@@ -5,10 +5,10 @@ noScreenshot({
     disableKeyboardShortcuts: true,
     disableInspectElement: true,
     disablePrintScreen: true,
-    disableScreenshot: true,
+    disableScreenshot: false,
     disableFunctionKeys: true,
     disableCtrlF4: true,
-    mouseLeave: true, // required for overlay with mouse leave a browser window
+    mouseLeave: false, // required for overlay with mouse leave a browser window
     mouseEnterAutoHide: false, // required for auto hide overlay with mouse enter a browser window
     ctrlOverlay: false, 
     altOverlay: false, // must be pass true for overlay with Alt or Options key press
