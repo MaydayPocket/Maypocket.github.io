@@ -13,4 +13,4 @@ noScreenshot({
     ctrlOverlay: false, 
     altOverlay: false, // must be pass true for overlay with Alt or Options key press
     shiftOverlay: false, // must be pass true for overlay with Shift key press
-} , 'custom-overlay-id');
+} , 'overlay');
