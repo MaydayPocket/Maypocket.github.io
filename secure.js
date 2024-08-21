@@ -5,7 +5,7 @@ noScreenshot({
     disableKeyboardShortcuts: true,
     disableInspectElement: true,
     disablePrintScreen: true,
-    disableScreenshot: false,
+    disableScreenshot: true,
     disableFunctionKeys: true,
     disableCtrlF4: true,
     mouseLeave: false, // required for overlay with mouse leave a browser window
