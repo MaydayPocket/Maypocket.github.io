@@ -4,17 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mayday Pocket</title>
+    <script src="node_modules/secure-web/dist/secure-web.js"></script>
     <link rel="stylesheet" href="styles.css"> <!-- Enlaza tu archivo CSS aquí -->
     <link rel="stylesheet" href="overlay.css">
-       <script src="node_modules/secure-web/dist/secure.js"></script>
-<!--    live link of package -->
-    <script src="https://cdn.jsdelivr.net/npm/secure-web/dist/secure-web.js"></script>
 
 </head>
 <body>
     <script>
-    const noScreenshot = require('secure-web');
-    const config = {
     disableRightClick: true,
     disableKeyboardShortcuts: true,
     disableInspectElement: true,
@@ -22,12 +18,13 @@
     disableScreenshot: true,
     disableFunctionKeys: true,
     disableCtrlF4: true,
-    mouseLeave: true, // Habilitar para mostrar el overlay cuando el ratón sale de la ventana
+    mouseLeave: false, // Habilitar para mostrar el overlay cuando el ratón sale de la ventana
     mouseEnterAutoHide: true, // Habilitar para ocultar el overlay cuando el ratón entra de nuevo
     ctrlOverlay: false,
     altOverlay: false,
     shiftOverlay: false,
-};
+        });
+    };
 
     </script>
     <header>
