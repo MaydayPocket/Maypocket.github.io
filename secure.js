@@ -1,4 +1,4 @@
-const noScreenshot = require('secure-web');
+onst noScreenshot = require('secure-web');
 noScreenshot({
  disableRightClick: true,
  disableKeyboardShortcuts: true,
