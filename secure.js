@@ -11,4 +11,12 @@ noScreenshot({
  ctrlOverlay: true,
  altOverlay: false,
  shiftOverlay: false,
+ } 
+
+ #customOverlay.show {
+    visibility: visible;
+}
+ <div id="customOverlay">
+    <p>No screenshots</p>
+</div>
  });
