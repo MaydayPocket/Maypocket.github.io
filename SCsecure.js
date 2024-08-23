@@ -73,8 +73,8 @@ function hideOverlay() {
     }
 }
 
-// Desactivar clic derecho para inspeccionar elemento
-document.addEventListener('contextmenu', function(event) {
+// Desactivar clic derecho para inspeccionar elemento, desactivado por ahora
+ocument.addEventListener('contextmenu', function(event) {
     event.preventDefault();
     showOverlay();
 });
