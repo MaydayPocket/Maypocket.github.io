@@ -25,39 +25,42 @@ document.addEventListener('keydown', function(event) {
     }
 });
 
-function showOverlay() {
-    let existingOverlay = document.getElementById('screenshotOverlay');
-    if (!existingOverlay) {
-        // Crea el elemento overlay si no existe ya
-        let overlay = document.createElement('div');
-        overlay.id = 'screenshotOverlay';
-        overlay.style.position = 'fixed';
-        overlay.style.top = '0';
-        overlay.style.left = '0';
-        overlay.style.width = '100%';
-        overlay.style.height = '100%';
-        overlay.style.backgroundColor = '#1C0A8A';
-        overlay.style.zIndex = '9999';
-        overlay.style.display = 'flex';
-        overlay.style.alignItems = 'center';
-        overlay.style.justifyContent = 'center';
-        overlay.style.color = '#E145FC';
-        overlay.style.fontFamily = 'Courier, monospace';
-        overlay.style.textAlign = 'center';
-        overlay.style.padding = '20px';
-        overlay.innerHTML = `
-            <div>
-                <p>Sorry, if you're watching this it's because you pressed Ctrl, Shift or PrtSc.</p>
-                <p>This site does not allow screenshots! Click anywhere to continue.</p>
-            </div>
-        `;
-        document.body.appendChild(overlay);
+// Manejo del evento beforeunload fuera del keydown
+window.addEventListener('beforeunload', function(event) {
+    event.preventDefault();
+    event.returnValue = ''; // Esto es necesario para Chrome
+});
 
-        // Añade un evento de clic para ocultar el overlay
-        overlay.addEventListener('click', function() {
-            hideOverlay();
-        });
-    }
+function showOverlay() {
+    // Crea el elemento overlay
+    let overlay = document.createElement('div');
+    overlay.id = 'screenshotOverlay';
+    overlay.style.position = 'fixed';
+    overlay.style.top = '0';
+    overlay.style.left = '0';
+    overlay.style.width = '100%';
+    overlay.style.height = '100%';
+    overlay.style.backgroundColor = '#1C0A8A';
+    overlay.style.zIndex = '9999';
+    overlay.style.display = 'flex';
+    overlay.style.alignItems = 'center';
+    overlay.style.justifyContent = 'center';
+    overlay.style.color = '#E145FC';
+    overlay.style.fontFamily = 'Courier, monospace';
+    overlay.style.textAlign = 'center';
+    overlay.style.padding = '20px';
+    overlay.innerHTML = `
+        <div>
+            <p>Sorry, if you're watching this it's because you pressed Ctrl, Shift or PrtSc.</p>
+            <p>This site does not allow screenshots! Click anywhere to continue.</p>
+        </div>
+    `;
+    document.body.appendChild(overlay);
+
+    // Añade un evento de clic para ocultar el overlay
+    overlay.addEventListener('click', function() {
+        hideOverlay();
+    });
 }
 
 function hideOverlay() {
@@ -67,12 +70,8 @@ function hideOverlay() {
     }
 }
 
-// Remueve cualquier listener existente para evitar duplicados
-document.removeEventListener('contextmenu', function(event) {});
+// Desactivar clic derecho para inspeccionar elemento, ahora sin overlay
 document.addEventListener('contextmenu', function(event) {
     event.preventDefault();
-    alert("No right click, my friend!");
+    alert("No right click, my friend!"); 
 });
-
-// Remueve el evento beforeunload si está configurado previamente
-window.removeEventListener('beforeunload', function(event) {});
