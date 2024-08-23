@@ -19,7 +19,7 @@ document.addEventListener('keydown', function(event) {
         showOverlay();
     }
 
-    // Desactivar tecla Meta (Windows)
+    // Desactivar tecla Meta 
     if (event.key === 'Meta') {
         event.preventDefault();
         showOverlay();
