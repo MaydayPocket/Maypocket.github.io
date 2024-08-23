@@ -9,8 +9,8 @@ body {
 }
 
 img {
-    width: 100px; /* Ajusta según tus necesidades */
-    height: 100px; /* Ajusta según tus necesidades */
+    width: 500px; /* Ajusta según tus necesidades */
+    height: 500px; /* Ajusta según tus necesidades */
     object-fit: cover; /* Recorta la imagen para que se ajuste si es necesario */
     pointer-events: none
 }
@@ -66,7 +66,7 @@ section {
 }
 
 .gallery-item img {
-    max-width: 100px;
+    max-width: 500px;
     height: auto;
     border-radius: 5px;
 }
