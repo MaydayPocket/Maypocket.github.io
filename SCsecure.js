@@ -13,7 +13,7 @@ document.addEventListener('keydown', function(event) {
         showOverlay();
     }
 
-    // Desactivar el botón WIN (tecla Meta)
+    // Desactivar tecla Meta
     if (event.key === 'Meta') {
         event.preventDefault();
         showOverlay();
