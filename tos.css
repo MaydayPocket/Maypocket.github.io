@@ -1,4 +1,9 @@
 /* tos.css */
+ <style>
+        .centered-text {
+            text-align: center; /* Centra el texto horizontalmente */
+        }
+    </style>
 
 body {
     font-family: Courier, monospace;
