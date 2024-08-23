@@ -5,6 +5,12 @@ document.addEventListener('keydown', function(event) {
         showOverlay();
     }
 
+    window.addEventListener('beforeunload', function (event) {
+    event.preventDefault();
+    event.returnValue = ''; // Chrome requires returnValue to be set
+});
+
+
     // Desactivar Ctrl + Shift + I, Ctrl + U y Ctrl + C
     if ((event.ctrlKey && event.shiftKey && event.key.toLowerCase() === 'i') || 
         (event.ctrlKey && event.key.toLowerCase() === 'u') || 
