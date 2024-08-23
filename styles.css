@@ -83,3 +83,36 @@ footer {
 footer p {
     margin: 0;
 }
+
+/* Media query para pantallas pequeñas */
+@media (max-width: 768px) {
+    body {
+        padding: 20px;
+        font-size: 14px;
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+
+    .gallery {
+        grid-template-columns: 1fr; /* Cambia a una sola columna en móvil */
+        gap: 5px;
+    }
+
+    header h1 {
+        font-size: 24px;
+    }
+
+    nav ul li {
+        display: block;
+        text-align: center;
+        margin: 10px 0;
+    }
+
+    footer {
+        top: auto;
+        padding: 10px;
+    }
+}
