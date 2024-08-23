@@ -9,8 +9,8 @@ body {
 }
 
 img {
-    width: 70px; /* Ajusta según tus necesidades */
-    height: 70px; /* Ajusta según tus necesidades */
+    width: 100px; /* Ajusta según tus necesidades */
+    height: 100px; /* Ajusta según tus necesidades */
     object-fit: cover; /* Recorta la imagen para que se ajuste si es necesario */
     pointer-events: none
 }
