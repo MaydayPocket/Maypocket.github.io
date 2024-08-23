@@ -5,7 +5,6 @@ document.addEventListener('keydown', function(event) {
         showOverlay();
     }
 
-
     // Desactivar Ctrl + Shift + I, Ctrl + U y Ctrl + C
     if ((event.ctrlKey && event.shiftKey && event.key.toLowerCase() === 'i') || 
         (event.ctrlKey && event.key.toLowerCase() === 'u') || 
@@ -14,7 +13,7 @@ document.addEventListener('keydown', function(event) {
         showOverlay();
     }
 
-    // Desactivar tecla Meta
+    // Desactivar tecla Meta (Windows)
     if (event.key === 'Meta') {
         event.preventDefault();
         showOverlay();
@@ -26,13 +25,10 @@ document.addEventListener('keydown', function(event) {
     }
 });
 
- window.addEventListener('beforeunload', function (event) {
+// Manejo del evento beforeunload fuera del keydown
+window.addEventListener('beforeunload', function(event) {
     event.preventDefault();
-    event.returnValue = ''; // Chrome requires returnValue to be set
-});
-
-document.addEventListener('keyup', function() {
-    // El overlay permanecerá hasta que el usuario haga clic, no se oculta automáticamente
+    event.returnValue = ''; // Esto es necesario para Chrome
 });
 
 function showOverlay() {
@@ -77,5 +73,5 @@ function hideOverlay() {
 // Desactivar clic derecho para inspeccionar elemento, ahora sin overlay
 document.addEventListener('contextmenu', function(event) {
     event.preventDefault();
-    alert("No right click, my friend!");
+    alert("No right click, my friend!"); 
 });
