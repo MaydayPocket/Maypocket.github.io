@@ -24,8 +24,8 @@ function showOverlay() {
     overlay.style.display = 'flex';
     overlay.style.alignItems = 'center';
     overlay.style.justifyContent = 'center';
-    overlay.style.color = 'white';
-    overlay.style.fontFamily = 'Arial, sans-serif';
+    overlay.style.color = '#E145FC';
+    overlay.style.fontFamily = 'Courier, monospace';
     overlay.style.textAlign = 'center';
     overlay.style.padding = '20px';
     overlay.innerHTML = `
