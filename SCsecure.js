@@ -20,15 +20,9 @@ document.addEventListener('keydown', function(event) {
     }
 
     // Detecta si se presiona Ctrl, Shift, o PrtSc (Imprimir Pantalla)
-    if (event.key === 'Control' || event.key === 'Shift' || event.key === 'PrintScreen') {
+    if (event.key === 'Control' || event.key === 'Shift' || event.key === 'Alt' || event.key === 'PrintScreen') {
         showOverlay();
     }
-});
-
-// Manejo del evento beforeunload fuera del keydown
-window.addEventListener('beforeunload', function(event) {
-    event.preventDefault();
-    event.returnValue = ''; // Esto es necesario para Chrome
 });
 
 function showOverlay() {
@@ -71,7 +65,14 @@ function hideOverlay() {
 }
 
 // Desactivar clic derecho para inspeccionar elemento, ahora sin overlay
-document.addEventListener('contextmenu', function(event) {
+ocument.addEventListener('contextmenu', function(event) {
     event.preventDefault();
     alert("No right click, my friend!"); 
 });
+
+// Manejo del evento beforeunload fuera del keydown
+ndow.addEventListener('beforeunload', function(event) {
+    event.preventDefault();
+    event.returnValue = ''; // Esto es necesario para Chrome
+});
+
