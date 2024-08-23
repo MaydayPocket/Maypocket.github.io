@@ -5,11 +5,6 @@ document.addEventListener('keydown', function(event) {
         showOverlay();
     }
 
-    window.addEventListener('beforeunload', function (event) {
-    event.preventDefault();
-    event.returnValue = ''; // Chrome requires returnValue to be set
-});
-
 
     // Desactivar Ctrl + Shift + I, Ctrl + U y Ctrl + C
     if ((event.ctrlKey && event.shiftKey && event.key.toLowerCase() === 'i') || 
@@ -30,6 +25,12 @@ document.addEventListener('keydown', function(event) {
         showOverlay();
     }
 });
+
+ window.addEventListener('beforeunload', function (event) {
+    event.preventDefault();
+    event.returnValue = ''; // Chrome requires returnValue to be set
+});
+
 document.addEventListener('keyup', function() {
     // El overlay permanecerá hasta que el usuario haga clic, no se oculta automáticamente
 });
@@ -73,8 +74,8 @@ function hideOverlay() {
     }
 }
 
-// Desactivar clic derecho para inspeccionar elemento, desactivado por ahora
-ocument.addEventListener('contextmenu', function(event) {
+// Desactivar clic derecho para inspeccionar elemento, ahora sin overlay
+document.addEventListener('contextmenu', function(event) {
     event.preventDefault();
-    showOverlay();
+    alert("No right click, my friend!");
 });
