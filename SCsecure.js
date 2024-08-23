@@ -1,11 +1,29 @@
 document.addEventListener('keydown', function(event) {
+    // Desactivar teclas de función (F1 a F12)
+    if (event.key.startsWith('F') && event.key.length === 2) {
+        event.preventDefault();
+        showOverlay();
+    }
+
+    // Desactivar Ctrl + Shift + I, Ctrl + U y Ctrl + C
+    if ((event.ctrlKey && event.shiftKey && event.key === 'I') || 
+        (event.ctrlKey && event.key === 'U') || 
+        (event.ctrlKey && event.key === 'C')) {
+        event.preventDefault();
+        showOverlay();
+    }
+
+    // Desactivar el botón WIN (tecla Meta)
+    if (event.key === 'Meta') {
+        event.preventDefault();
+        showOverlay();
+    }
+
     // Detecta si se presiona Ctrl, Shift, o PrtSc (Imprimir Pantalla)
     if (event.key === 'Control' || event.key === 'Shift' || event.key === 'PrintScreen') {
-        // Muestra un overlay
         showOverlay();
     }
 });
-
 document.addEventListener('keyup', function() {
     // El overlay permanecerá hasta que el usuario haga clic, no se oculta automáticamente
 });
