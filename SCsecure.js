@@ -1,3 +1,10 @@
+// Manejo del evento contextmenu (click derecho)
+document.addEventListener('contextmenu', function(event) {
+    event.preventDefault();
+    alert("No right click, my friend!");
+}, { once: true }); // Usando `{ once: true }` para asegurarnos de que solo se ejecute una vez
+
+// Desactivar teclas de función y otros atajos de teclado
 document.addEventListener('keydown', function(event) {
     // Desactivar teclas de función (F1 a F12)
     if (event.key.startsWith('F') && event.key.length === 2) {
@@ -5,7 +12,7 @@ document.addEventListener('keydown', function(event) {
         showOverlay();
     }
 
-    // Desactivar Ctrl + Shift + I, Ctrl + U y Ctrl + C
+    // Desactivar Ctrl + Shift + I, Ctrl + U, Ctrl + C
     if ((event.ctrlKey && event.shiftKey && event.key.toLowerCase() === 'i') || 
         (event.ctrlKey && event.key.toLowerCase() === 'u') || 
         (event.ctrlKey && event.key.toLowerCase() === 'c')) {
@@ -25,10 +32,10 @@ document.addEventListener('keydown', function(event) {
     }
 });
 
-// Manejo del evento beforeunload fuera del keydown
-window.addEventListener('beforeunload', function(event) {
+// Remover el evento beforeunload para evitar la alerta de "guardar cambios"
+window.removeEventListener('beforeunload', function(event) {
     event.preventDefault();
-    event.returnValue = ''; // Esto es necesario para Chrome
+    event.returnValue = '';
 });
 
 function showOverlay() {
@@ -69,9 +76,3 @@ function hideOverlay() {
         overlay.remove();
     }
 }
-
-// Desactivar clic derecho para inspeccionar elemento, ahora sin overlay
-document.addEventListener('contextmenu', function(event) {
-    event.preventDefault();
-    alert("No right click, my friend!"); 
-});
