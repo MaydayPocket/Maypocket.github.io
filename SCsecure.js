@@ -2,7 +2,6 @@
 document.addEventListener('contextmenu', function(event) {
     event.preventDefault();
     alert("No right click, my friend!");
-}, { once: true }); // Usando `{ once: true }` para asegurarnos de que solo se ejecute una vez
 
 // Desactivar teclas de función y otros atajos de teclado
 document.addEventListener('keydown', function(event) {
