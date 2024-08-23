@@ -6,9 +6,9 @@ document.addEventListener('keydown', function(event) {
     }
 
     // Desactivar Ctrl + Shift + I, Ctrl + U y Ctrl + C
-    if ((event.ctrlKey && event.shiftKey && event.key === 'I') || 
-        (event.ctrlKey && event.key === 'U') || 
-        (event.ctrlKey && event.key === 'C')) {
+    if ((event.ctrlKey && event.shiftKey && event.key.toLowerCase() === 'i') || 
+        (event.ctrlKey && event.key.toLowerCase() === 'u') || 
+        (event.ctrlKey && event.key.toLowerCase() === 'c')) {
         event.preventDefault();
         showOverlay();
     }
@@ -66,3 +66,9 @@ function hideOverlay() {
         overlay.remove();
     }
 }
+
+// Desactivar clic derecho para inspeccionar elemento
+document.addEventListener('contextmenu', function(event) {
+    event.preventDefault();
+    showOverlay();
+});
