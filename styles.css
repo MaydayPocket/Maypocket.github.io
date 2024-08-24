@@ -86,6 +86,19 @@ footer p {
 
 /* Media query para pantallas pequeñas */
 @media (max-width: 768px) {
+
+
+      nav ul {
+        display: flex;
+        justify-content: space-around; /* Distribuye los elementos de manera equitativa */
+        flex-wrap: nowrap; /* Previene que los elementos se apilen en una nueva línea */
+    }
+
+    nav ul li {
+        margin: 0 5px; /* Reduce el margen entre los enlaces para que quepan mejor en pantallas pequeñas */
+    }
+}
+
     body {
         padding: 20px;
         font-size: 14px;
